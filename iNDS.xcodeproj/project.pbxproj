@@ -256,8 +256,6 @@
 		CAE673901CC824F900E46EDF /* WCEasySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE673881CC824F900E46EDF /* WCEasySettingsViewController.m */; };
 		CAE673911CC824F900E46EDF /* WCEasySettingsOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE6738A1CC824F900E46EDF /* WCEasySettingsOption.m */; };
 		CAE6739A1CC8257C00E46EDF /* WCEasySettingsOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE673991CC8257C00E46EDF /* WCEasySettingsOptionViewController.m */; };
-		CAE8C0C41CEA65AB00082785 /* UnrarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2C42C1CB21D8E00ED22BB /* UnrarKit.framework */; };
-		CAE8C0C51CEA65AB00082785 /* UnrarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2C42C1CB21D8E00ED22BB /* UnrarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D31CC8A417927BCB0098FB9C /* CHBgDropboxSync.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8A117927BCB0098FB9C /* CHBgDropboxSync.m */; };
 		D31CC8A517927BCB0098FB9C /* DropboxClearer.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8A317927BCB0098FB9C /* DropboxClearer.m */; };
 		D31CC8B217927C3B0098FB9C /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8AB17927C3B0098FB9C /* ConciseKit.m */; };
@@ -283,7 +281,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CAE8C0C51CEA65AB00082785 /* UnrarKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -824,7 +821,6 @@
 				BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */,
 				BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */,
 				D3B8BB921794ACCE0061D1D8 /* DropboxSDK.framework in Frameworks */,
-				CAE8C0C41CEA65AB00082785 /* UnrarKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2226,7 +2222,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.6.0;
+				CURRENT_PROJECT_VERSION = 1.5.3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -2280,7 +2276,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.6.0;
+				CURRENT_PROJECT_VERSION = 1.5.3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
