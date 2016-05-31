@@ -774,17 +774,17 @@ int do7z_extract_entry(char *archivePath, char *archiveCachePath, char *entryNam
     return 0;
   }
   if (res == SZ_ERROR_UNSUPPORTED) {
-    return 3;
-    PrintError("decoder doesn't support this archive");
+	PrintError("decoder doesn't support this archive");
+	return 3;
   } else if (res == SZ_ERROR_MEM) {
-    return 4;
-    PrintError("can not allocate memory");
+	PrintError("can not allocate memory");
+	return 4;
   } else if (res == SZ_ERROR_CRC) {
-    return 5;
-    PrintError("CRC error");
+	PrintError("CRC error");
+	return 5;
   } else {
-    return 6;
-    printf("\nERROR #%d\n", res);
+	printf("\nERROR #%d\n", res);
+	return 6;
   }
   return 7;
 }

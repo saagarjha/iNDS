@@ -65,7 +65,7 @@
         if (CSRF) {
             NSString *post = @"appId=90"; //Needs to ba changed per app
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-            NSString *postLength = [NSString stringWithFormat:@"%ld", [postData length]];
+            NSString *postLength = [NSString stringWithFormat:@"%ld", (unsigned long)[postData length]];
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:[NSURL URLWithString:@"http://builds.io/api/resign/"]];
             [request setHTTPMethod:@"POST"];

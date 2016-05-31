@@ -346,7 +346,7 @@ static CGPathRef createPathFromXYValues(NSArray *xValues, NSArray *yValues) {
 	NSMutableArray *values = [NSMutableArray arrayWithCapacity:steps];
 	CGFloat value = 0;
 	
-	CGFloat sign = (endValue-startValue)/fabsf(endValue-startValue);
+	CGFloat sign = (endValue-startValue)/fabs(endValue-startValue);
 	
 	CGFloat oscillationComponent;
 	CGFloat coefficient;

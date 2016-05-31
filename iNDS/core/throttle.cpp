@@ -188,7 +188,7 @@ waiter:
 		else
 			sleepy = 0;
 		if(sleepy >= 10)
-			Sleep((sleepy / 2)); // reduce it further beacuse Sleep usually sleeps for more than the amount we tell it to
+			Sleep((int)(sleepy / 2)); // reduce it further beacuse Sleep usually sleeps for more than the amount we tell it to
 #ifndef ANDROID
 		else if(sleepy > 0) // spin for <1 millisecond waits
 			SwitchToThread(); // limit to other threads on the same CPU core for other short waits

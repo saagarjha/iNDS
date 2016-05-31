@@ -83,8 +83,7 @@
         } else {
             NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
             NSData *plistData = [NSData dataWithContentsOfFile:plistPath];
-            NSDictionary *loadedPlist =
-            [NSPropertyListSerialization propertyListFromData:plistData mutabilityOption:0 format:NULL errorDescription:NULL];
+			NSDictionary *loadedPlist = [NSPropertyListSerialization propertyListWithData:plistData options:0 format:NULL error:NULL];
             NSString *scheme = [[[[loadedPlist objectForKey:@"CFBundleURLTypes"] objectAtIndex:0] objectForKey:@"CFBundleURLSchemes"] objectAtIndex:0];
             if ([scheme isEqual:@"db-APP_KEY"]) {
                 errorMsg = @"You must set the URL Scheme correctly in iNDS-Info.plist for Dropbox to work!";

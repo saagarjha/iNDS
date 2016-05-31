@@ -187,7 +187,7 @@
 }
 
 - (void) setActionIndicatorCount:(NSUInteger)count {
-    [self.actionIndicatorLabel setText:[NSString stringWithFormat:@"%lu", count]];
+    [self.actionIndicatorLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)count]];
     // May want to resize the shape to make a 'pill' shape in the future? Still looks fine for
     // numbers up to 100.
 }
@@ -377,8 +377,8 @@
     if(string) {
         float offset = (SPINNER_SIZE + 2 * ICON_OFFSET);
         float width = self.barView.frame.size.width - offset;
-        CGSize stringSize = [string sizeWithFont:self.stringLabel.font
-                               constrainedToSize:CGSizeMake(width, 300)];
+		CGSize stringSize = [string boundingRectWithSize:CGSizeMake(width, 300) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: self.stringLabel.font} context:NULL].size;//[string sizeWithFont:self.stringLabel.font
+//                               constrainedToSize:CGSizeMake(width, 300)];
         stringWidth = stringSize.width;
         stringHeight = stringSize.height;
 
@@ -410,7 +410,7 @@
 
 - (void) dismissAll {
 
-    for (int i = (_actionArray.count - 1); i >= 0; i--) {
+    for (int i = (int)(_actionArray.count - 1); i >= 0; i--) {
         NSString *action = [_actionArray objectAtIndex:i];
         
         // First item (visible one)
@@ -560,7 +560,7 @@
         int frame = (diff * 58.57 - 1); // 58fps?
         NSArray *frames = [anim valueForKey:@"values"];
         if (frame >= frames.count)  // For security
-            frame = frames.count - 1;
+            frame = (int)(frames.count - 1);
         
         float yOffset = [[frames objectAtIndex:frame] floatValue];
         
